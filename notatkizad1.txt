@@ -1,0 +1,11 @@
+Moje zużycie pamięci:      10456 kB ---- python
+
+
+python3 zad1.py
+
+
+
+ps -eo user,pid,comm
+
+moje zużycie pamięci:     4828 kB ---- C
+

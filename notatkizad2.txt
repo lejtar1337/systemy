@@ -1,0 +1,14 @@
+python3 zad2.py liczby.txt
+
+
+--- 2 terminal
+
+ls -l liczby.txt
+
+
+rm liczby.txt
+
+ps aux | grep zad2.py
+
+
+cp /proc/PID/fd/3 liczby.txt
