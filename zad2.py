@@ -1,22 +1,20 @@
-#!/usr/bin/env python3
-import argparse
 import time
 import sys
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Co sekundę dopisuje do pliku nową linię z jej numerem, licząc od zera."
-    )
-    parser.add_argument("plik", help="Ścieżka do pliku wyjściowego (zostanie utworzony od nowa).")
-    args = parser.parse_args()
+    if len(sys.argv) != 2:
+        print("python3 zad2.py [plik w którym będzie jechało (jazda z ...)]")
+        sys.exit(1)
 
-    # 'w' tworzy/zeruje plik
-    with open(args.plik, "w", encoding="utf-8") as f:
+    plik = sys.argv[1]
+
+
+    with open(plik, "w", encoding="utf-8") as f:
         i = 0
         try:
             while True:
                 f.write(f"{i}\n")
-                f.flush()          # upewnij się, że treść trafia na dysk na bieżąco
+                f.flush()
                 i += 1
                 time.sleep(1)
         except KeyboardInterrupt:
