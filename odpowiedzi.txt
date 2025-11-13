@@ -1,0 +1,16 @@
+1a. echo "tekst123" > plik.txt // nadpisywanie
+1b. echo "tekst123" >> plik.txt // dopisywanie
+2. ALT + 3 // komentuje
+3a. tab // dodawanie wcięcia w bieżącej linii
+3b. backspace
+4a. nano ~/.nanorc
+4b. wpisac do pliku set tabstospaces do pliku i zapisac
+5a. nano ~/.vimrc
+5b. wpisać:
+set expandtab
+set tabstop=4
+set shiftwidth=4
+6a. vimtutor
+6b. :w vim.txt
+6c. :q
+6d. vim vim.txt
