@@ -1,0 +1,10 @@
+1. head -n 1 iris.csv
+2. tail -n +2 iris.csv
+3. sed -e 's/"Setosa"/1/g' -e 's/"Versicolor"/2/g' -e 's/"Virginica"/3/g' iris.csv
+4. tail -n +2 iris.csv | cut -d, -f5 | tr -d '"' | sort | uniq
+5. awk -F, 'NR>1 {print $1+$2+$3+$4}' iris.csv
+6. awk -F, 'NR>1 {sum+=$2; count++} END {print sum/count}' iris.csv
+7. tail -n +2 iris.csv | sort -t, -k4,4nr | head -n 1
+8. awk -F, '$1 > 7 {print $5}' iris.csv
+9. awk -F, 'NR>1 {printf "%d\t%d\t%d\t%d\t%s\n", $1, $2, $3, $4, $5}' iris.csv
+10. (head -n 1 iris.csv && tail -n +2 iris.csv | shuf) > iris_random.csv
